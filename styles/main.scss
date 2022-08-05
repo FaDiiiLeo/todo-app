@@ -40,10 +40,12 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
+    min-height: 300px;
 }
 
 .mobile-bg{
     display: none;
+    min-height: 188px;
 }
 
 .todo-container{
