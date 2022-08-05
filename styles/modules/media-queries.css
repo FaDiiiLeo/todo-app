@@ -1,0 +1,103 @@
+@media all and (max-width: 1200px) {
+  .todo-container {
+    width: 50%;
+    margin-top: 45px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .bg-image img {
+    height: 35%;
+  }
+}
+@media all and (max-width: 1000px) {
+  * {
+    font-size: 95%;
+  }
+  .todo-container {
+    width: 55%;
+    margin-top: 30px;
+  }
+  .task-list-options, .mobile-options {
+    font-size: 120%;
+  }
+  .dragdrop-info {
+    font-size: 120%;
+  }
+}
+@media all and (max-width: 900px) {
+  * {
+    font-size: 90%;
+  }
+  .todo-container {
+    width: 60%;
+  }
+}
+@media all and (max-width: 768px) {
+  * {
+    font-size: 88%;
+  }
+  .todo-container {
+    width: 55%;
+  }
+  .mobile-options {
+    display: flex;
+  }
+  .desktop-options {
+    display: none;
+  }
+  .header {
+    margin-bottom: 20px;
+  }
+  .header p {
+    letter-spacing: 0.6em;
+  }
+  .header img {
+    width: 20px;
+    height: 20px;
+  }
+  .task-input {
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+  .task-input input[type=text] {
+    padding: 16px 12px 12px 0px;
+  }
+  .checkbox-container {
+    margin: 14px 12px 20px 0px;
+  }
+  .checkmark {
+    height: 18px;
+    width: 18px;
+  }
+  .checkbox-container .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 2px;
+    height: 6px;
+  }
+}
+@media all and (max-width: 550px) {
+  .todo-container {
+    width: 70%;
+  }
+  .desktop-bg {
+    display: none;
+  }
+  .mobile-bg {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+  }
+}
+@media all and (max-width: 375px) {
+  * {
+    font-size: 85%;
+  }
+  .todo-container {
+    width: 85%;
+  }
+  .header p {
+    letter-spacing: 0.4em;
+  }
+}/*# sourceMappingURL=media-queries.css.map */

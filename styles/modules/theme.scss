@@ -1,0 +1,73 @@
+.light-theme{
+    .container{
+        background-color: hsla(235, 32%, 92%, 0.493);
+    }
+    .task-input{
+        background-color: white;
+    }
+    .task-input input::placeholder{
+        color: #83848f;
+    }
+    .task-list-options, .mobile-options{
+        background-color: white;
+        color: hsl(236, 9%, 61%);
+    }
+    .clear-completed-tasks{
+        &:hover{
+            color: hsl(235, 19%, 35%);
+        }
+    }
+    .desktop-options > *, .mobile-options > *{
+        &:hover{
+            color: hsl(235, 19%, 35%);
+        }
+    }
+    .dragdrop-info{
+        color: hsl(236, 9%, 61%);
+    }
+}
+
+.dark-theme{
+    .container{
+        background-color: #181824;
+    }
+    .task-input{
+        background-color: #25273C;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+    }
+    .task-input input{
+        background-color: #25273C;
+        color: #C2C4DD;
+    }
+    .task-input input::placeholder{
+        color: #696B82;
+    }
+    .task-list-options, .mobile-options{
+        background-color: #25273C;
+        color: #666783;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+    }
+    .checkmark{
+        background-color: #25273C;
+        border-color: #666783;
+    }
+    .clear-completed-tasks{
+        &:hover{
+            color: hsl(236, 33%, 92%);
+        }
+    }
+    .desktop-options > *, .mobile-options > *{
+        &:hover{
+            color: #E7EBFA;
+        }
+    }
+    .options{
+        border-top: 1px solid rgba(136, 136, 136, 0.329);
+    }
+    .dragdrop-info{
+        color: #666783;
+    }
+    .attribution{
+        color: #C2C4DD;
+    }
+}

@@ -1,0 +1,287 @@
+.checkbox-container {
+  position: relative;
+  margin: 16px 20px 22px 0px;
+  padding: 0px 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: 19px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  border: 1px solid rgb(136, 136, 136);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-image: linear-gradient(to bottom right, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 6px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.light-theme .container {
+  background-color: hsla(235deg, 32%, 92%, 0.493);
+}
+.light-theme .task-input {
+  background-color: white;
+}
+.light-theme .task-input input::-moz-placeholder {
+  color: #83848f;
+}
+.light-theme .task-input input:-ms-input-placeholder {
+  color: #83848f;
+}
+.light-theme .task-input input::placeholder {
+  color: #83848f;
+}
+.light-theme .task-list-options, .light-theme .mobile-options {
+  background-color: white;
+  color: hsl(236deg, 9%, 61%);
+}
+.light-theme .clear-completed-tasks:hover {
+  color: hsl(235deg, 19%, 35%);
+}
+.light-theme .desktop-options > *:hover, .light-theme .mobile-options > *:hover {
+  color: hsl(235deg, 19%, 35%);
+}
+.light-theme .dragdrop-info {
+  color: hsl(236deg, 9%, 61%);
+}
+
+.dark-theme .container {
+  background-color: #181824;
+}
+.dark-theme .task-input {
+  background-color: #25273C;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+}
+.dark-theme .task-input input {
+  background-color: #25273C;
+  color: #C2C4DD;
+}
+.dark-theme .task-input input::-moz-placeholder {
+  color: #696B82;
+}
+.dark-theme .task-input input:-ms-input-placeholder {
+  color: #696B82;
+}
+.dark-theme .task-input input::placeholder {
+  color: #696B82;
+}
+.dark-theme .task-list-options, .dark-theme .mobile-options {
+  background-color: #25273C;
+  color: #666783;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+}
+.dark-theme .checkmark {
+  background-color: #25273C;
+  border-color: #666783;
+}
+.dark-theme .clear-completed-tasks:hover {
+  color: hsl(236deg, 33%, 92%);
+}
+.dark-theme .desktop-options > *:hover, .dark-theme .mobile-options > *:hover {
+  color: #E7EBFA;
+}
+.dark-theme .options {
+  border-top: 1px solid rgba(136, 136, 136, 0.329);
+}
+.dark-theme .dragdrop-info {
+  color: #666783;
+}
+.dark-theme .attribution {
+  color: #C2C4DD;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-image {
+  width: 100%;
+}
+
+.desktop-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mobile-bg {
+  display: none;
+}
+
+.todo-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 35px 0px;
+}
+
+.header p {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 16px;
+}
+
+.header img {
+  cursor: pointer;
+}
+
+.task-input {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+}
+
+.task-input input[type=text] {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  padding: 24px 20px 20px 0px;
+  border-radius: 6px;
+}
+
+.task-list-options {
+  box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+  border-radius: 6px;
+}
+
+.task-list {
+  padding: 20px;
+}
+
+.no-tasks-toShow {
+  text-align: center;
+}
+
+.options {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.items-completed {
+  cursor: default;
+}
+
+.clear-completed-tasks {
+  cursor: pointer;
+}
+
+.desktop-options {
+  display: flex;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.mobile-options {
+  width: 100%;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 4px;
+  display: none;
+  justify-content: center;
+  gap: 12px;
+  font-weight: bold;
+  box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+}
+
+.desktop-options > *, .mobile-options > * {
+  cursor: pointer;
+}
+
+.desktop-options p:first-child, .mobile-options p:first-child {
+  color: hsl(220deg, 98%, 61%);
+}
+
+.dragdrop-info {
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

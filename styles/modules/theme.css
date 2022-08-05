@@ -1,0 +1,73 @@
+.light-theme .container {
+  background-color: hsla(235deg, 32%, 92%, 0.493);
+}
+.light-theme .task-input {
+  background-color: white;
+}
+.light-theme .task-input input::-moz-placeholder {
+  color: #83848f;
+}
+.light-theme .task-input input:-ms-input-placeholder {
+  color: #83848f;
+}
+.light-theme .task-input input::placeholder {
+  color: #83848f;
+}
+.light-theme .task-list-options, .light-theme .mobile-options {
+  background-color: white;
+  color: hsl(236deg, 9%, 61%);
+}
+.light-theme .clear-completed-tasks:hover {
+  color: hsl(235deg, 19%, 35%);
+}
+.light-theme .desktop-options > *:hover, .light-theme .mobile-options > *:hover {
+  color: hsl(235deg, 19%, 35%);
+}
+.light-theme .dragdrop-info {
+  color: hsl(236deg, 9%, 61%);
+}
+
+.dark-theme .container {
+  background-color: #181824;
+}
+.dark-theme .task-input {
+  background-color: #25273C;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+}
+.dark-theme .task-input input {
+  background-color: #25273C;
+  color: #C2C4DD;
+}
+.dark-theme .task-input input::-moz-placeholder {
+  color: #696B82;
+}
+.dark-theme .task-input input:-ms-input-placeholder {
+  color: #696B82;
+}
+.dark-theme .task-input input::placeholder {
+  color: #696B82;
+}
+.dark-theme .task-list-options, .dark-theme .mobile-options {
+  background-color: #25273C;
+  color: #666783;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
+}
+.dark-theme .checkmark {
+  background-color: #25273C;
+  border-color: #666783;
+}
+.dark-theme .clear-completed-tasks:hover {
+  color: hsl(236deg, 33%, 92%);
+}
+.dark-theme .desktop-options > *:hover, .dark-theme .mobile-options > *:hover {
+  color: #E7EBFA;
+}
+.dark-theme .options {
+  border-top: 1px solid rgba(136, 136, 136, 0.329);
+}
+.dark-theme .dragdrop-info {
+  color: #666783;
+}
+.dark-theme .attribution {
+  color: #C2C4DD;
+}/*# sourceMappingURL=theme.css.map */

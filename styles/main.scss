@@ -1,0 +1,153 @@
+@use 'modules/custom-checkbox';
+@use 'modules/theme';
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body{
+    height: 100%;
+    font-size: 100%;
+}
+
+body{
+    position: relative;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg-image{
+    width: 100%;
+}
+
+.desktop-bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.mobile-bg{
+    display: none;
+}
+
+.todo-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 35px 0px;
+}
+
+.header p{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 16px;
+}
+
+.header img{
+    cursor: pointer;
+}
+
+.task-input{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+}
+
+.task-input input[type=text]{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+    padding: 24px 20px 20px 0px;
+    border-radius: 6px;
+}
+
+.task-list-options{
+    box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+    border-radius: 6px;
+}
+
+.task-list{
+    padding: 20px;
+}
+
+.no-tasks-toShow{
+    text-align: center;
+}
+
+.options{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.items-completed{
+    cursor: default;
+}
+
+.clear-completed-tasks{
+    cursor: pointer;
+}
+
+.desktop-options{ 
+    display: flex;
+    gap: 12px;
+    font-weight: bold;
+}
+
+.mobile-options{
+    width: 100%;
+    padding: 20px 30px;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    gap: 12px;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
+}
+
+.desktop-options > *, .mobile-options > *{
+    cursor: pointer;
+}
+
+.desktop-options p:first-child, .mobile-options p:first-child{
+    color: hsl(220, 98%, 61%);
+}
+
+.dragdrop-info{
+    margin: 40px 0px;
+    text-align: center;
+}
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 20px; }
+.attribution a { color: hsl(228, 45%, 44%); }

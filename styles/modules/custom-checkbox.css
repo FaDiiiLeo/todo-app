@@ -1,0 +1,61 @@
+.checkbox-container {
+  position: relative;
+  margin: 16px 20px 22px 0px;
+  padding: 0px 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: 19px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  border: 1px solid rgb(136, 136, 136);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-image: linear-gradient(to bottom right, hsl(192deg, 100%, 67%), hsl(280deg, 87%, 65%));
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 6px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}/*# sourceMappingURL=custom-checkbox.css.map */
