@@ -1,12 +1,37 @@
+@media all and (max-width: 2560px) {
+  .attribution {
+    margin-top: 1300px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .attribution {
+    margin-top: 400px;
+  }
+}
 @media all and (max-width: 1200px) {
+  * {
+    font-size: 100%;
+  }
   .todo-container {
     width: 50%;
     margin-top: 45px;
   }
+  .entered-task-text {
+    width: 85%;
+  }
 }
 @media all and (max-width: 1024px) {
   .bg-image img {
-    height: 35%;
+    height: 200px;
+  }
+  .entered-task-text {
+    width: 78%;
+  }
+  .x-icon {
+    right: 17px;
+  }
+  .attribution {
+    margin-top: 250px;
   }
 }
 @media all and (max-width: 1000px) {
@@ -17,7 +42,8 @@
     width: 55%;
     margin-top: 30px;
   }
-  .task-list-options, .mobile-options {
+  .task-list-options,
+.mobile-options {
     font-size: 120%;
   }
   .dragdrop-info {
@@ -65,6 +91,9 @@
   .checkbox-container {
     margin: 14px 12px 20px 0px;
   }
+  .entered-task-text {
+    width: 75%;
+  }
   .checkmark {
     height: 18px;
     width: 18px;
@@ -75,10 +104,19 @@
     width: 2px;
     height: 6px;
   }
+  .x-icon {
+    width: 16px;
+    height: 16px;
+    right: 16px;
+    display: block;
+  }
+  .attribution {
+    margin-top: 170px;
+  }
 }
 @media all and (max-width: 550px) {
   .todo-container {
-    width: 70%;
+    width: 85%;
   }
   .desktop-bg {
     display: none;
@@ -90,6 +128,16 @@
     width: 100%;
   }
 }
+@media all and (max-width: 425px) {
+  * {
+    font-size: 90%;
+  }
+  .x-icon {
+    width: 12px;
+    height: 12px;
+    right: 16px;
+  }
+}
 @media all and (max-width: 375px) {
   * {
     font-size: 85%;
@@ -99,5 +147,13 @@
   }
   .header p {
     letter-spacing: 0.4em;
+  }
+  .entered-task-text {
+    width: 70%;
+  }
+}
+@media all and (max-width: 320px) {
+  .x-icon {
+    right: 10px;
   }
 }/*# sourceMappingURL=media-queries.css.map */

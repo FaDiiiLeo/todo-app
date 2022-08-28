@@ -1,5 +1,6 @@
 @use 'modules/custom-checkbox';
 @use 'modules/theme';
+@use 'modules/custom-scrollbar';
 
 @mixin flexCenter {
     display: flex;
@@ -7,7 +8,7 @@
     align-items: center;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -15,40 +16,39 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html, body{
-    height: 100%;
+html,
+body {
     font-size: 100%;
 }
 
-body{
+body {
     position: relative;
 }
 
-.container{
-    height: 100%;
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
-.bg-image{
+.bg-image {
     width: 100%;
 }
 
-.desktop-bg{
+.desktop-bg {
     position: absolute;
     top: 0;
     width: 100%;
     min-height: 300px;
 }
 
-.mobile-bg{
+.mobile-bg {
     display: none;
     min-height: 188px;
 }
 
-.todo-container{
+.todo-container {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -56,25 +56,25 @@ body{
     z-index: 1;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px 35px 0px;
 }
 
-.header p{
+.header p {
     font-size: 2.5em;
     font-weight: bold;
     color: white;
     letter-spacing: 16px;
 }
 
-.header img{
+.header img {
     cursor: pointer;
 }
 
-.task-input{
+.task-input {
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -82,7 +82,7 @@ body{
     box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
 }
 
-.task-input input[type=text]{
+.task-input input[type=text] {
     width: 100%;
     border: none;
     outline: none;
@@ -91,20 +91,17 @@ body{
     border-radius: 6px;
 }
 
-.task-list-options{
+.task-list-options {
     box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
     border-radius: 6px;
 }
 
-.task-list{
+.no-tasks-toShow {
     padding: 20px;
-}
-
-.no-tasks-toShow{
     text-align: center;
 }
 
-.options{
+.options {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -112,21 +109,21 @@ body{
     border-top: 1px solid rgba(0, 0, 0, 0.329);
 }
 
-.items-completed{
+.items-left {
     cursor: default;
 }
 
-.clear-completed-tasks{
+.clear-completed-tasks {
     cursor: pointer;
 }
 
-.desktop-options{ 
+.desktop-options {
     display: flex;
     gap: 12px;
     font-weight: bold;
 }
 
-.mobile-options{
+.mobile-options {
     width: 100%;
     padding: 20px 30px;
     margin-top: 20px;
@@ -138,18 +135,75 @@ body{
     box-shadow: 0px 5px 15px rgba(95, 95, 95, 0.267);
 }
 
-.desktop-options > *, .mobile-options > *{
+.desktop-options>*,
+.mobile-options>* {
     cursor: pointer;
 }
 
-.desktop-options p:first-child, .mobile-options p:first-child{
-    color: hsl(220, 98%, 61%);
-}
-
-.dragdrop-info{
+.dragdrop-info {
     margin: 40px 0px;
     text-align: center;
 }
 
-.attribution { font-size: 11px; text-align: center; margin-bottom: 20px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+//Custom Scrollbar
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(70, 70, 70);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+// CSS for tasks in the list
+
+.task {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+
+        .x-icon {
+            display: block;
+        }
+    }
+}
+
+.entered-task-text {
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.x-icon {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.active-view-option {
+    color: hsl(220, 98%, 61%);
+}
+
+.checked-task {
+    text-decoration: line-through;
+    color: hsl(236deg, 9%, 61%) !important;
+}

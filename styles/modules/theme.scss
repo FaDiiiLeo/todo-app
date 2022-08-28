@@ -1,73 +1,103 @@
-.light-theme{
-    .container{
+.light-theme {
+    .container {
         background-color: hsla(235, 32%, 92%, 0.493);
     }
-    .task-input{
+
+    .task-input {
         background-color: white;
     }
-    .task-input input::placeholder{
+
+    .task-input input[type=text] {
+        color: hsl(235, 19%, 35%);
+    }
+
+    .task-input input::placeholder {
         color: #83848f;
     }
-    .task-list-options, .mobile-options{
+
+    .task-list-options,
+    .mobile-options {
         background-color: white;
         color: hsl(236, 9%, 61%);
     }
-    .clear-completed-tasks{
-        &:hover{
+
+    .clear-completed-tasks {
+        &:hover {
             color: hsl(235, 19%, 35%);
         }
     }
-    .desktop-options > *, .mobile-options > *{
-        &:hover{
-            color: hsl(235, 19%, 35%);
-        }
+
+    .entered-task-text {
+        color: hsl(235, 19%, 35%);
     }
-    .dragdrop-info{
+
+    .non-active-view-option:hover {
+        color: hsl(235, 19%, 35%);
+    }
+
+    .dragdrop-info {
         color: hsl(236, 9%, 61%);
     }
 }
 
-.dark-theme{
-    .container{
+.dark-theme {
+    .container {
         background-color: #181824;
     }
-    .task-input{
+
+    .task-input {
         background-color: #25273C;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
     }
-    .task-input input{
+
+    .task-input input {
         background-color: #25273C;
-        color: #C2C4DD;
+        color: hsl(236deg, 33%, 92%);
     }
-    .task-input input::placeholder{
+
+    .task-input input::placeholder {
         color: #696B82;
     }
-    .task-list-options, .mobile-options{
+
+    .task-list-options,
+    .mobile-options {
         background-color: #25273C;
         color: #666783;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.267);
     }
-    .checkmark{
+
+    .checkmark {
         background-color: #25273C;
         border-color: #666783;
     }
-    .clear-completed-tasks{
-        &:hover{
+
+    .task {
+        border-bottom: 1px solid rgba(126, 126, 126, 0.329);
+    }
+
+    .entered-task-text {
+        color: hsl(236deg, 33%, 92%);
+    }
+
+    .clear-completed-tasks {
+        &:hover {
             color: hsl(236, 33%, 92%);
         }
     }
-    .desktop-options > *, .mobile-options > *{
-        &:hover{
-            color: #E7EBFA;
-        }
-    }
-    .options{
+
+    .options {
         border-top: 1px solid rgba(136, 136, 136, 0.329);
     }
-    .dragdrop-info{
+
+    .non-active-view-option:hover {
+        color: hsl(236deg, 33%, 92%);
+    }
+
+    .dragdrop-info {
         color: #666783;
     }
-    .attribution{
+
+    .attribution {
         color: #C2C4DD;
     }
 }
