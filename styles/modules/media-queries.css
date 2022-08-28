@@ -10,7 +10,7 @@
 }
 @media all and (max-width: 1200px) {
   * {
-    font-size: 105%;
+    font-size: 100%;
   }
   .todo-container {
     width: 50%;
