@@ -110,9 +110,6 @@
     right: 16px;
     display: block;
   }
-  .attribution {
-    margin-top: 170px;
-  }
 }
 @media all and (max-width: 550px) {
   .todo-container {
