@@ -10,7 +10,7 @@
 }
 @media all and (max-width: 1200px) {
   * {
-    font-size: 100%;
+    font-size: 105%;
   }
   .todo-container {
     width: 50%;
@@ -36,7 +36,7 @@
 }
 @media all and (max-width: 1000px) {
   * {
-    font-size: 95%;
+    font-size: 100%;
   }
   .todo-container {
     width: 55%;
@@ -52,7 +52,7 @@
 }
 @media all and (max-width: 900px) {
   * {
-    font-size: 90%;
+    font-size: 95%;
   }
   .todo-container {
     width: 60%;
@@ -60,7 +60,7 @@
 }
 @media all and (max-width: 768px) {
   * {
-    font-size: 88%;
+    font-size: 90%;
   }
   .todo-container {
     width: 55%;
@@ -127,7 +127,7 @@
 }
 @media all and (max-width: 425px) {
   * {
-    font-size: 90%;
+    font-size: 95%;
   }
   .x-icon {
     width: 12px;
@@ -137,7 +137,7 @@
 }
 @media all and (max-width: 375px) {
   * {
-    font-size: 85%;
+    font-size: 90%;
   }
   .todo-container {
     width: 85%;
