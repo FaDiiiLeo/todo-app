@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
   <link rel="stylesheet" href="styles/modules/media-queries.css">
   <script src="scripts/script.js" defer></script>
 </head>
+
 <body class="light-theme">
   <div class="bg-image">
     <img class="desktop-bg" id="bg-img-desktop" src="images/bg-desktop-light.jpg" alt="background image">
@@ -25,36 +27,39 @@
       </div>
       <div class="task-input">
         <label class="checkbox-container">
-          <input type="checkbox">
+          <input type="checkbox" class="currently-writing">
           <span class="checkmark"></span>
         </label>
         <input id="input-field" type="text" placeholder="Create a new todo...">
       </div>
       <div class="task-list-options">
+        <p class="no-tasks-toShow">You have no todos</p>
         <div class="task-list">
-          <p class="no-tasks-toShow">No tasks to show</p>
         </div>
         <div class="options">
-          <p class="items-completed">0 items left</p>
+          <p class="items-left">0 items left</p>
           <div class="desktop-options">
-            <p>All</p>
-            <p>Active</p>
-            <p>Completed</p>
+            <p class="view-all-desktop">All</p>
+            <p class="view-active-desktop">Active</p>
+            <p class="view-completed-desktop">Completed</p>
           </div>
           <p class="clear-completed-tasks">Clear Completed</p>
         </div>
       </div>
       <div class="mobile-options">
-        <p>All</p>
-        <p>Active</p>
-        <p>Completed</p>
+        <p class="view-all-mobile">All</p>
+        <p class="view-active-mobile">Active</p>
+        <p class="view-completed-mobile">Completed</p>
       </div>
-      <div class="dragdrop-info"><p>Drag and drop to reorder list</p></div>
+      <div class="dragdrop-info">
+        <p>Drag and drop to reorder list</p>
+      </div>
     </div>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/FaDiiiLeo" target="_blank">Fahad Akram</a>.
     </div>
   </div>
 </body>
+
 </html>
