@@ -33,6 +33,10 @@
 .light-theme .dragdrop-info {
   color: hsl(236deg, 9%, 61%);
 }
+.light-theme .drag-over {
+  background-color: rgb(231, 231, 231);
+  border-radius: 6px;
+}
 
 .dark-theme .container {
   background-color: #181824;
@@ -84,4 +88,8 @@
 }
 .dark-theme .attribution {
   color: #C2C4DD;
+}
+.dark-theme .drag-over {
+  background-color: #2d2f42;
+  border-radius: 6px;
 }/*# sourceMappingURL=theme.css.map */

@@ -1,6 +1,5 @@
 @use 'modules/custom-checkbox';
 @use 'modules/theme';
-@use 'modules/custom-scrollbar';
 
 @mixin flexCenter {
     display: flex;
@@ -171,7 +170,7 @@ body {
 }
 
 
-// CSS for tasks in the list
+// CSS for dynamically generated tasks
 
 .task {
     display: flex;
@@ -191,6 +190,7 @@ body {
 .entered-task-text {
     width: 80%;
     word-wrap: break-word;
+    pointer-events: none;
 }
 
 .x-icon {
